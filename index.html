@@ -1,0 +1,1526 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ALPHA BLADES | Premium Barbershop Narellan</title>
+
+  <meta name="description"
+        content="ALPHA BLADES Barbershop in Narellan NSW. Professional haircuts, beard grooming, colouring and more. Book your next appointment today.">
+
+  <style>
+    :root {
+      --black: #080808;
+      --dark: #111111;
+      --dark2: #1a1a1a;
+      --white: #ffffff;
+      --off-white: #f5f5f5;
+      --grey: #a0a0a0;
+      --border: #2b2b2b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(8, 8, 8, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+    }
+
+    .logo span {
+      color: #999;
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #ddd;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-book {
+      background: white;
+      color: black !important;
+      padding: 10px 18px;
+      border-radius: 4px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,.72),
+          rgba(0,0,0,.78)
+        ),
+        radial-gradient(
+          circle at center,
+          #444 0%,
+          #111 45%,
+          #000 100%
+        );
+
+      padding: 100px 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 9vw, 7rem);
+      line-height: .95;
+      letter-spacing: -4px;
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #aaa;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #c8c8c8;
+      font-size: 1.1rem;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border: 1px solid white;
+      border-radius: 4px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: white;
+      color: black;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: .85;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 90px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-heading .small {
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .75rem;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      max-width: 650px;
+      margin: auto;
+      color: #999;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      background: var(--off-white);
+      color: var(--black);
+    }
+
+    .services .section-heading h2 {
+      color: black;
+    }
+
+    .services .section-heading p {
+      color: #666;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #ddd;
+      padding: 30px 25px;
+      min-height: 190px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      background: black;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .service-number {
+      font-size: .75rem;
+      color: #888;
+      letter-spacing: 2px;
+    }
+
+    .service-card h3 {
+      margin: 20px 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .service-card p {
+      color: #777;
+      font-size: .9rem;
+    }
+
+    .service-card:hover p {
+      color: #bbb;
+    }
+
+    /* =========================
+       PRICING
+    ========================= */
+
+    .pricing {
+      background: #0d0d0d;
+    }
+
+    .price-list {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .price-row {
+      border-bottom: 1px solid var(--border);
+      padding: 22px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .price-row h3 {
+      font-size: 1rem;
+    }
+
+    .price-row p {
+      color: #777;
+      font-size: .85rem;
+    }
+
+    .price {
+      font-weight: 800;
+      white-space: nowrap;
+      color: white;
+    }
+
+    .price-note {
+      text-align: center;
+      margin-top: 30px;
+      color: #777;
+      font-size: .8rem;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: white;
+      color: black;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-visual {
+      min-height: 450px;
+      background:
+        linear-gradient(135deg, #333, #080808);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: "AB";
+      font-size: 10rem;
+      font-weight: 900;
+      color: rgba(255,255,255,.06);
+      position: absolute;
+    }
+
+    .blade-symbol {
+      font-size: 5rem;
+      position: relative;
+    }
+
+    .about-text .small {
+      color: #777;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .75rem;
+    }
+
+    .about-text h2 {
+      font-size: 2.7rem;
+      margin: 12px 0 20px;
+    }
+
+    .about-text p {
+      color: #555;
+      margin-bottom: 18px;
+    }
+
+    .trust-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .trust-list li {
+      border-top: 1px solid #ddd;
+      padding: 12px 0;
+      font-weight: 700;
+    }
+
+    /* =========================
+       REVIEWS
+    ========================= */
+
+    .reviews {
+      background: #111;
+    }
+
+    .rating {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .rating-number {
+      font-size: 4rem;
+      font-weight: 900;
+    }
+
+    .stars {
+      letter-spacing: 5px;
+      font-size: 1.3rem;
+    }
+
+    .rating p {
+      color: #888;
+      margin-top: 5px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review-card {
+      background: #191919;
+      padding: 28px;
+      border: 1px solid #292929;
+    }
+
+    .review-card .stars {
+      font-size: .9rem;
+      margin-bottom: 15px;
+    }
+
+    .review-card p {
+      color: #ccc;
+      font-size: .95rem;
+    }
+
+    .review-card strong {
+      display: block;
+      margin-top: 20px;
+      font-size: .85rem;
+      color: #888;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+      background: #f5f5f5;
+      color: black;
+    }
+
+    .gallery .section-heading h2 {
+      color: black;
+    }
+
+    .gallery .section-heading p {
+      color: #777;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .gallery-item {
+      min-height: 270px;
+      background: linear-gradient(135deg, #111, #555);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-item::after {
+      content: "ALPHA BLADES";
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      font-size: .7rem;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,.65);
+    }
+
+    .gallery-icon {
+      font-size: 3.5rem;
+      opacity: .35;
+    }
+
+    /* =========================
+       BOOKING
+    ========================= */
+
+    .booking {
+      background: white;
+      color: black;
+    }
+
+    .booking-box {
+      max-width: 850px;
+      margin: auto;
+      background: #f5f5f5;
+      padding: 45px;
+      border: 1px solid #ddd;
+    }
+
+    .booking-box h2 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .booking-box > p {
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      font-size: .8rem;
+      font-weight: 700;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      background: white;
+      font-family: inherit;
+      font-size: 1rem;
+      color: black;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .booking-button {
+      margin-top: 20px;
+      width: 100%;
+      border: 0;
+      background: black;
+      color: white;
+      padding: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .booking-button:hover {
+      background: #333;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: #080808;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .contact-card {
+      border: 1px solid #292929;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .contact-card .icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #999;
+      font-size: .9rem;
+    }
+
+    .contact-card a:hover {
+      color: white;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: white !important;
+      text-decoration: underline;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #000;
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: .8rem;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        font-size: .75rem;
+      }
+
+      .hero {
+        min-height: 78vh;
+        padding: 80px 20px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .service-grid,
+      .review-grid,
+      .gallery-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-visual {
+        min-height: 280px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .booking-box {
+        padding: 25px 20px;
+      }
+
+      .price-row {
+        align-items: flex-start;
+      }
+
+      section {
+        padding: 65px 18px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+    <div class="nav-container">
+
+      <a href="#home" class="logo">
+        ALPHA <span>BLADES</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li>
+          <a href="#booking" class="nav-book">BOOK NOW</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Narellan • NSW
+      </div>
+
+      <h1>
+        SHARP<br>
+        <span>BY DESIGN.</span>
+      </h1>
+
+      <p>
+        Premium barbering and grooming at ALPHA BLADES.
+        From precision cuts and beard work to colouring and
+        professional hair treatments.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#booking" class="btn btn-primary">
+          BOOK AN APPOINTMENT
+        </a>
+
+        <a href="tel:0485522448" class="btn btn-outline">
+          CALL 0485 522 448
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SERVICES
+  ========================= -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="small">
+          What We Do
+        </div>
+
+        <h2>THE SERVICES</h2>
+
+        <p>
+          Professional grooming services tailored to
+          your style, hair and beard.
+        </p>
+
+      </div>
+
+      <div class="service-grid">
+
+        <div class="service-card">
+          <span class="service-number">01</span>
+          <h3>Hair Colouring</h3>
+          <p>
+            Professional hair colouring services.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-number">02</span>
+          <h3>Beard Conditioning</h3>
+          <p>
+            Conditioning treatments for a healthier,
+            softer and better-maintained beard.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-number">03</span>
+          <h3>Beard Dyeing</h3>
+          <p>
+            Professional beard colour services.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-number">04</span>
+          <h3>Beard Maintenance</h3>
+          <p>
+            Keep your beard clean, shaped and looking sharp.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-number">05</span>
+          <h3>Beard Trim</h3>
+          <p>
+            Precision trimming and shaping for your beard.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-number">06</span>
+          <h3>Buzz Cut</h3>
+          <p>
+            A clean, sharp and low-maintenance classic.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-number">07</span>
+          <h3>Capillary Hair Treatment</h3>
+          <p>
+            Professional hair treatment designed to
+            support healthier-looking hair.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRICES
+  ========================= -->
+
+  <section class="pricing" id="prices">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="small">
+          Service Menu
+        </div>
+
+        <h2>PRICES</h2>
+
+        <p>
+          Select your service when booking.
+          Contact ALPHA BLADES for current pricing.
+        </p>
+
+      </div>
+
+      <div class="price-list">
+
+        <div class="price-row">
+          <div>
+            <h3>Hair Colouring</h3>
+            <p>Professional colour service</p>
+          </div>
+          <div class="price">ENQUIRE</div>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <h3>Beard Conditioning</h3>
+            <p>Beard conditioning treatment</p>
+          </div>
+          <div class="price">ENQUIRE</div>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <h3>Beard Dyeing</h3>
+            <p>Professional beard colour</p>
+          </div>
+          <div class="price">ENQUIRE</div>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <h3>Beard Maintenance</h3>
+            <p>Shape and maintain your beard</p>
+          </div>
+          <div class="price">ENQUIRE</div>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <h3>Beard Trim</h3>
+            <p>Precision beard trim</p>
+          </div>
+          <div class="price">ENQUIRE</div>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <h3>Buzz Cut</h3>
+            <p>Clean and classic</p>
+          </div>
+          <div class="price">ENQUIRE</div>
+        </div>
+
+        <div class="price-row">
+          <div>
+            <h3>Capillary Hair Treatment</h3>
+            <p>Professional hair treatment</p>
+          </div>
+          <div class="price">ENQUIRE</div>
+        </div>
+
+      </div>
+
+      <p class="price-note">
+        Prices can be updated here once the current ALPHA BLADES
+        service menu is confirmed.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-visual">
+          <div class="blade-symbol">✂</div>
+        </div>
+
+        <div class="about-text">
+
+          <div class="small">
+            About Alpha Blades
+          </div>
+
+          <h2>
+            BUILT FOR A<br>
+            SHARPER LOOK.
+          </h2>
+
+          <p>
+            ALPHA BLADES is a local barber shop located in
+            Narellan, NSW, focused on professional hair and
+            beard grooming.
+          </p>
+
+          <p>
+            Whether you're after a clean buzz cut, beard trim,
+            colour service or hair treatment, the goal is simple:
+            leave looking sharp and feeling confident.
+          </p>
+
+          <ul class="trust-list">
+            <li>★★★★★ 5.0 Google rating</li>
+            <li>236 Google reviews</li>
+            <li>Narellan NSW</li>
+            <li>Professional barber services</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       REVIEWS
+  ========================= -->
+
+  <section class="reviews" id="reviews">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="small">
+          Customer Feedback
+        </div>
+
+        <h2>WHAT CUSTOMERS SAY</h2>
+
+      </div>
+
+      <div class="rating">
+
+        <div class="rating-number">5.0</div>
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          Based on 236 Google reviews
+        </p>
+
+      </div>
+
+      <div class="review-grid">
+
+        <div class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Great place with great staff. The owner
+            Jay pays real attention to detail.”
+          </p>
+
+          <strong>
+            — Lochlin Laws
+          </strong>
+
+        </div>
+
+        <div class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Great haircut, listened and advised to
+            make it a better haircut.”
+          </p>
+
+          <strong>
+            — Joseph Howman
+          </strong>
+
+        </div>
+
+        <div class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Amazing service and prices!”
+          </p>
+
+          <strong>
+            — Chloe O'Meara
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       GALLERY
+  ========================= -->
+
+  <section class="gallery" id="gallery">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="small">
+          The Work
+        </div>
+
+        <h2>THE ALPHA LOOK</h2>
+
+        <p>
+          Replace these placeholders with real ALPHA BLADES
+          haircut, beard and shop photos.
+        </p>
+
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <div class="gallery-icon">✂</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-icon">💈</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-icon">🧔</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-icon">✂</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-icon">💈</div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-icon">🪒</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       BOOKING
+  ========================= -->
+
+  <section class="booking" id="booking">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="small">
+          Appointments
+        </div>
+
+        <h2>BOOK YOUR CHAIR</h2>
+
+        <p>
+          Send your preferred service and appointment details
+          directly to ALPHA BLADES.
+        </p>
+
+      </div>
+
+      <div class="booking-box">
+
+        <h2>REQUEST AN APPOINTMENT</h2>
+
+        <p>
+          Complete the form and tap the button. Your phone will
+          open a message addressed to ALPHA BLADES with your
+          booking details.
+        </p>
+
+        <form id="bookingForm">
+
+          <div class="form-grid">
+
+            <div class="form-group">
+
+              <label for="name">
+                Your Name
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="phone">
+                Phone
+              </label>
+
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Your phone number"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="service">
+                Service
+              </label>
+
+              <select id="service" required>
+
+                <option value="">
+                  Select a service
+                </option>
+
+                <option>
+                  Hair Colouring
+                </option>
+
+                <option>
+                  Beard Conditioning
+                </option>
+
+                <option>
+                  Beard Dyeing
+                </option>
+
+                <option>
+                  Beard Maintenance
+                </option>
+
+                <option>
+                  Beard Trim
+                </option>
+
+                <option>
+                  Buzz Cut
+                </option>
+
+                <option>
+                  Capillary Hair Treatment
+                </option>
+
+              </select>
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="date">
+                Preferred Date
+              </label>
+
+              <input
+                type="date"
+                id="date"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="time">
+                Preferred Time
+              </label>
+
+              <input
+                type="time"
+                id="time"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="barber">
+                Barber Preference
+              </label>
+
+              <select id="barber">
+
+                <option>
+                  No preference
+                </option>
+
+                <option>
+                  Jay
+                </option>
+
+              </select>
+
+            </div>
+
+            <div class="form-group full">
+
+              <label for="notes">
+                Notes
+              </label>
+
+              <textarea
+                id="notes"
+                placeholder="Anything we should know?"
+              ></textarea>
+
+            </div>
+
+          </div>
+
+          <button
+            type="submit"
+            class="booking-button"
+          >
+            SEND BOOKING REQUEST
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="small">
+          Find Us
+        </div>
+
+        <h2>COME THROUGH</h2>
+
+        <p>
+          Visit ALPHA BLADES in Narellan or get in touch
+          to arrange your next appointment.
+        </p>
+
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+
+          <div class="icon">📞</div>
+
+          <h3>PHONE</h3>
+
+          <a href="tel:0485522448">
+            0485 522 448
+          </a>
+
+        </div>
+
+        <div class="contact-card">
+
+          <div class="icon">📍</div>
+
+          <h3>LOCATION</h3>
+
+          <p>
+            Shop 5c/342 Camden Valley Wy
+            <br>
+            Narellan NSW 2567
+          </p>
+
+          <a
+            class="map-link"
+            href="https://www.google.com/maps/search/?api=1&query=Shop+5c%2F342+Camden+Valley+Way%2C+Narellan+NSW+2567"
+            target="_blank"
+          >
+            GET DIRECTIONS →
+          </a>
+
+        </div>
+
+        <div class="contact-card">
+
+          <div class="icon">🕒</div>
+
+          <h3>OPENING HOURS</h3>
+
+          <p>
+            Mon–Wed: 8:30am–6:00pm<br>
+            Thu: 8:30am–8:00pm<br>
+            Fri: 8:30am–6:00pm<br>
+            Sat: 8:00am–6:00pm<br>
+            Sun: 9:00am–4:30pm
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      <strong>ALPHA BLADES</strong>
+      · Narellan NSW
+    </p>
+
+    <p>
+      © 2026 ALPHA BLADES. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- =========================
+       BOOKING JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    document
+      .getElementById("bookingForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name =
+          document.getElementById("name").value;
+
+        const phone =
+          document.getElementById("phone").value;
+
+        const service =
+          document.getElementById("service").value;
+
+        const date =
+          document.getElementById("date").value;
+
+        const time =
+          document.getElementById("time").value;
+
+        const barber =
+          document.getElementById("barber").value;
+
+        const notes =
+          document.getElementById("notes").value;
+
+        const message =
+          "Hi ALPHA BLADES, I'd like to request an appointment.%0A%0A" +
+          "Name: " + encodeURIComponent(name) + "%0A" +
+          "Phone: " + encodeURIComponent(phone) + "%0A" +
+          "Service: " + encodeURIComponent(service) + "%0A" +
+          "Preferred date: " + encodeURIComponent(date) + "%0A" +
+          "Preferred time: " + encodeURIComponent(time) + "%0A" +
+          "Barber: " + encodeURIComponent(barber) + "%0A" +
+          "Notes: " + encodeURIComponent(notes);
+
+        /*
+          Opens the customer's SMS application.
+
+          Australian Alpha Blades number:
+          0485 522 448
+        */
+
+        window.location.href =
+          "sms:+61485522448?body=" + message;
+
+      });
+
+  </script>
+
+</body>
+</html>
+```
