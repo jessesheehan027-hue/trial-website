@@ -1,0 +1,1747 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALPHA BLADES NARELLAN | Barber Shop</title>
+
+<meta name="description"
+content="ALPHA BLADES Narellan. Premium barbering, fades, beard grooming, colouring and hair treatments. Book your appointment online.">
+
+<style>
+:root{
+  --black:#080808;
+  --dark:#111;
+  --dark2:#181818;
+  --white:#fff;
+  --grey:#999;
+  --light:#f3f3f3;
+  --border:#292929;
+  --green:#c8ff00;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--black);
+  color:white;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,input,select,textarea{
+  font-family:inherit;
+}
+
+/* NAVIGATION */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:999;
+  background:rgba(8,8,8,.97);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(12px);
+}
+
+.nav-container{
+  max-width:1200px;
+  margin:auto;
+  padding:18px 22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:1.3rem;
+  font-weight:900;
+  letter-spacing:2px;
+}
+
+.logo span{
+  color:#888;
+  font-weight:400;
+}
+
+.nav-links{
+  display:flex;
+  gap:25px;
+  align-items:center;
+  list-style:none;
+}
+
+.nav-links a{
+  font-size:.85rem;
+  font-weight:700;
+  color:#ddd;
+}
+
+.nav-links a:hover{
+  color:white;
+}
+
+.book-nav{
+  background:white;
+  color:black!important;
+  padding:10px 17px;
+  border-radius:4px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:88vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:80px 20px;
+
+  background:
+  linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.86)),
+  url("https://images.pexels.com/photos/4625626/pexels-photo-4625626.jpeg?auto=compress&cs=tinysrgb&w=1600")
+  center/cover;
+}
+
+.hero-content{
+  max-width:900px;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:5px;
+  color:#aaa;
+  font-size:.75rem;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(3.2rem,9vw,7.5rem);
+  line-height:.88;
+  letter-spacing:-5px;
+  font-weight:900;
+}
+
+.hero h1 span{
+  color:#999;
+}
+
+.hero p{
+  max-width:650px;
+  margin:28px auto 35px;
+  color:#ccc;
+  font-size:1.05rem;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 26px;
+  border:1px solid white;
+  border-radius:4px;
+  font-weight:800;
+  transition:.25s;
+}
+
+.btn-primary{
+  background:white;
+  color:black;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* GENERAL */
+
+section{
+  padding:90px 20px;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.section-heading{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.small{
+  text-transform:uppercase;
+  letter-spacing:3px;
+  color:#888;
+  font-size:.72rem;
+  margin-bottom:10px;
+}
+
+.section-heading h2{
+  font-size:clamp(2rem,5vw,3.2rem);
+}
+
+.section-heading p{
+  color:#888;
+  max-width:650px;
+  margin:12px auto 0;
+}
+
+/* SERVICES */
+
+.services{
+  background:var(--light);
+  color:black;
+}
+
+.services .section-heading h2{
+  color:black;
+}
+
+.services .section-heading p{
+  color:#666;
+}
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.service-card{
+  background:white;
+  border:1px solid #ddd;
+  padding:25px;
+  min-height:210px;
+  display:flex;
+  flex-direction:column;
+  transition:.25s;
+}
+
+.service-card:hover{
+  background:black;
+  color:white;
+  transform:translateY(-5px);
+}
+
+.service-number{
+  color:#888;
+  font-size:.7rem;
+  letter-spacing:2px;
+}
+
+.service-card h3{
+  margin-top:20px;
+  font-size:1.15rem;
+}
+
+.service-card p{
+  color:#777;
+  font-size:.85rem;
+  margin-top:8px;
+}
+
+.service-card:hover p{
+  color:#bbb;
+}
+
+.service-price{
+  margin-top:auto;
+  padding-top:20px;
+  font-weight:900;
+}
+
+/* PRICES */
+
+.pricing{
+  background:#0d0d0d;
+}
+
+.price-list{
+  max-width:900px;
+  margin:auto;
+}
+
+.price-row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:20px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.price-row h3{
+  font-size:1rem;
+}
+
+.price-row p{
+  color:#777;
+  font-size:.82rem;
+}
+
+.price{
+  white-space:nowrap;
+  font-weight:900;
+}
+
+.price-disclaimer{
+  text-align:center;
+  color:#666;
+  font-size:.78rem;
+  margin-top:30px;
+}
+
+/* ABOUT */
+
+.about{
+  background:white;
+  color:black;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-image{
+  min-height:460px;
+  background:
+  linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.7)),
+  url("https://images.fresha.com/locations/location-profile-images/330145/5298873/5d773055-fa1f-4bec-b527-7521c3f8c62b-TheBarbersSonGlenferrie-AU-Victoria-Melbourne-Hawthorn-Fresha.jpg?class=venue-gallery-large&f_width=1200")
+  center/cover;
+  display:flex;
+  align-items:flex-end;
+  padding:30px;
+}
+
+.about-image strong{
+  font-size:2rem;
+  letter-spacing:2px;
+}
+
+.about-text h2{
+  font-size:2.7rem;
+  line-height:1;
+  margin:12px 0 20px;
+}
+
+.about-text p{
+  color:#555;
+  margin-bottom:18px;
+}
+
+.trust-list{
+  list-style:none;
+  margin-top:25px;
+}
+
+.trust-list li{
+  border-top:1px solid #ddd;
+  padding:12px 0;
+  font-weight:700;
+}
+
+/* REVIEWS */
+
+.reviews{
+  background:#111;
+}
+
+.rating{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.rating-number{
+  font-size:4rem;
+  font-weight:900;
+}
+
+.stars{
+  letter-spacing:4px;
+}
+
+.rating p{
+  color:#777;
+}
+
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.review-card{
+  background:#191919;
+  border:1px solid #292929;
+  padding:28px;
+}
+
+.review-card p{
+  color:#ccc;
+  margin-top:15px;
+}
+
+.review-card strong{
+  display:block;
+  color:#777;
+  margin-top:20px;
+}
+
+/* GALLERY */
+
+.gallery{
+  background:#f4f4f4;
+  color:black;
+}
+
+.gallery .section-heading h2{
+  color:black;
+}
+
+.gallery .section-heading p{
+  color:#777;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.gallery-item{
+  height:300px;
+  overflow:hidden;
+  background:#222;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.05);
+}
+
+.gallery-caption{
+  display:none;
+}
+
+/* BOOKING */
+
+.booking{
+  background:white;
+  color:black;
+}
+
+.booking-box{
+  max-width:950px;
+  margin:auto;
+  background:#f3f3f3;
+  padding:40px;
+  border:1px solid #ddd;
+}
+
+.booking-box h2{
+  font-size:2.2rem;
+  margin-bottom:8px;
+}
+
+.booking-box > p{
+  color:#777;
+  margin-bottom:30px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group.full{
+  grid-column:1/-1;
+}
+
+label{
+  font-size:.75rem;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:800;
+  margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid #ccc;
+  background:white;
+  color:black;
+  font-size:1rem;
+}
+
+textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+/* TIME SLOTS */
+
+.time-title{
+  margin-top:25px;
+  margin-bottom:10px;
+  font-size:.8rem;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.time-slots{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+}
+
+.time-slot{
+  border:1px solid #bbb;
+  background:white;
+  color:black;
+  padding:11px 5px;
+  cursor:pointer;
+  font-weight:700;
+  border-radius:3px;
+}
+
+.time-slot:hover{
+  border-color:black;
+}
+
+.time-slot.selected{
+  background:black;
+  color:white;
+  border-color:black;
+}
+
+.time-slot.disabled{
+  color:#aaa;
+  background:#e5e5e5;
+  cursor:not-allowed;
+}
+
+.selected-time{
+  margin-top:15px;
+  font-weight:800;
+}
+
+.booking-button{
+  margin-top:25px;
+  width:100%;
+  border:0;
+  background:black;
+  color:white;
+  padding:17px;
+  cursor:pointer;
+  font-weight:900;
+  font-size:1rem;
+}
+
+.booking-button:hover{
+  background:#333;
+}
+
+.booking-note{
+  margin-top:15px;
+  color:#777;
+  font-size:.75rem;
+}
+
+/* CONTACT */
+
+.contact{
+  background:#080808;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.contact-card{
+  border:1px solid #292929;
+  padding:30px;
+  text-align:center;
+}
+
+.contact-card .icon{
+  font-size:1.8rem;
+  margin-bottom:10px;
+}
+
+.contact-card p,
+.contact-card a{
+  color:#999;
+  font-size:.9rem;
+}
+
+.contact-card a:hover{
+  color:white;
+}
+
+.map-link{
+  display:inline-block;
+  margin-top:10px;
+  color:white!important;
+  text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+  background:#000;
+  border-top:1px solid #222;
+  padding:30px 20px;
+  text-align:center;
+  color:#666;
+  font-size:.8rem;
+}
+
+footer strong{
+  color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .nav-container{
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .nav-links{
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .nav-links a{
+    font-size:.72rem;
+  }
+
+  .hero{
+    min-height:80vh;
+  }
+
+  .hero h1{
+    letter-spacing:-3px;
+  }
+
+  .service-grid,
+  .review-grid,
+  .gallery-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .about-image{
+    min-height:300px;
+  }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .form-group.full{
+    grid-column:auto;
+  }
+
+  .booking-box{
+    padding:25px 18px;
+  }
+
+  .time-slots{
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .price-row{
+    align-items:flex-start;
+  }
+
+  section{
+    padding:65px 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+<div class="nav-container">
+
+<a href="#home" class="logo">
+ALPHA <span>BLADES</span>
+</a>
+
+<ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#prices">Prices</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#booking" class="book-nav">BOOK NOW</a></li>
+</ul>
+
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+Shop 5c • Narellan NSW
+</div>
+
+<h1>
+ALPHA BLADES<br>
+<span>NARELLAN</span>
+</h1>
+
+<p>
+Sharp cuts. Clean fades. Precision beard work.
+Professional barbering in the heart of Narellan.
+</p>
+
+<div class="buttons">
+
+<a href="#booking" class="btn btn-primary">
+BOOK YOUR CHAIR
+</a>
+
+<a href="tel:0485522448" class="btn">
+0485 522 448
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">Services</div>
+
+<h2>CHOOSE YOUR CUT</h2>
+
+<p>
+Pick the service that matches the look you're after.
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+<span class="service-number">01</span>
+<h3>Classic Haircut</h3>
+<p>Clean scissor and clipper cut with styling.</p>
+<div class="service-price">$45–$55</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">02</span>
+<h3>Skin Fade</h3>
+<p>Precision fade blended from skin into the top.</p>
+<div class="service-price">$50–$60</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">03</span>
+<h3>Taper Fade</h3>
+<p>Sharp taper around the sides and neckline.</p>
+<div class="service-price">$45–$55</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">04</span>
+<h3>Buzz Cut</h3>
+<p>Clean, simple and low-maintenance clipper cut.</p>
+<div class="service-price">$35–$45</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">05</span>
+<h3>Kids Cut</h3>
+<p>Fresh and comfortable cuts for younger clients.</p>
+<div class="service-price">$35–$45</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">06</span>
+<h3>Haircut + Beard</h3>
+<p>Complete haircut with beard trim and line-up.</p>
+<div class="service-price">$60–$75</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">07</span>
+<h3>Beard Trim</h3>
+<p>Shape, trim and clean line-up.</p>
+<div class="service-price">$25–$35</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">08</span>
+<h3>Beard Conditioning</h3>
+<p>Conditioning treatment for a softer, healthier beard.</p>
+<div class="service-price">$20–$30</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">09</span>
+<h3>Beard Dye</h3>
+<p>Professional beard colouring and blending.</p>
+<div class="service-price">$30–$45</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">10</span>
+<h3>Hair Colouring</h3>
+<p>Professional colour service tailored to your look.</p>
+<div class="service-price">$60–$120+</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">11</span>
+<h3>Hair Treatment</h3>
+<p>Capillary hair treatment for healthier-looking hair.</p>
+<div class="service-price">$50–$100+</div>
+</div>
+
+<div class="service-card">
+<span class="service-number">12</span>
+<h3>Head Shave</h3>
+<p>Clean clipper or razor head shave.</p>
+<div class="service-price">$30–$45</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRICE LIST -->
+
+<section class="pricing" id="prices">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">Indicative Menu</div>
+
+<h2>PRICE GUIDE</h2>
+
+<p>
+Simple pricing so you know roughly what to expect.
+</p>
+
+</div>
+
+<div class="price-list">
+
+<div class="price-row">
+<div>
+<h3>Classic Haircut</h3>
+<p>30 minute appointment</p>
+</div>
+<div class="price">$45–$55</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Skin Fade</h3>
+<p>30 minute appointment</p>
+</div>
+<div class="price">$50–$60</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Taper Fade</h3>
+<p>30 minute appointment</p>
+</div>
+<div class="price">$45–$55</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Buzz Cut</h3>
+<p>30 minute appointment</p>
+</div>
+<div class="price">$35–$45</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Kids Cut</h3>
+<p>30 minute appointment</p>
+</div>
+<div class="price">$35–$45</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Haircut + Beard</h3>
+<p>30–60 minute appointment</p>
+</div>
+<div class="price">$60–$75</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Beard Trim / Line-up</h3>
+<p>30 minute appointment</p>
+</div>
+<div class="price">$25–$35</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Beard Dye</h3>
+<p>30 minute appointment</p>
+</div>
+<div class="price">$30–$45</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Hair Colouring</h3>
+<p>60–120 minute appointment</p>
+</div>
+<div class="price">$60–$120+</div>
+</div>
+
+<div class="price-row">
+<div>
+<h3>Capillary Hair Treatment</h3>
+<p>60 minute appointment</p>
+</div>
+<div class="price">$50–$100+</div>
+</div>
+
+</div>
+
+<div class="price-disclaimer">
+These are suggested website price ranges based on comparable
+Narellan/Sydney barber pricing. They are not confirmed official
+ALPHA BLADES prices and should be replaced with the shop's actual
+menu before publishing.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div class="about-image">
+<strong>ALPHA BLADES<br>NARELLAN</strong>
+</div>
+
+<div class="about-text">
+
+<div class="small">About Alpha Blades</div>
+
+<h2>
+PRECISION.<br>
+DETAIL.<br>
+STYLE.
+</h2>
+
+<p>
+ALPHA BLADES is a Narellan barber shop specialising in
+professional haircuts, beard grooming, colouring and
+hair treatments.
+</p>
+
+<p>
+With a 5.0 Google rating and more than 236 reviews,
+ALPHA BLADES has built a strong reputation with local
+customers.
+</p>
+
+<ul class="trust-list">
+<li>★★★★★ 5.0 Google rating</li>
+<li>236 Google reviews</li>
+<li>Narellan NSW</li>
+<li>Walk-ins welcome</li>
+<li>Online booking available</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="reviews" id="reviews">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">Customer Reviews</div>
+
+<h2>WHAT PEOPLE SAY</h2>
+
+</div>
+
+<div class="rating">
+
+<div class="rating-number">5.0</div>
+
+<div class="stars">★★★★★</div>
+
+<p>236 Google reviews</p>
+
+</div>
+
+<div class="review-grid">
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+“Great place with great staff. The owner Jay pays real
+attention to detail.”
+</p>
+<strong>— Lochlin Laws</strong>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+“Great haircut, listened and advised to make it a better haircut.”
+</p>
+<strong>— Joseph Howman</strong>
+</div>
+
+<div class="review-card">
+<div class="stars">★★★★★</div>
+<p>
+“Amazing service and prices!”
+</p>
+<strong>— Chloe O'Meara</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">Gallery</div>
+
+<h2>THE LOOK</h2>
+
+<p>
+Temporary stock photography is used below. Replace these
+with real ALPHA BLADES haircut and shop photos before launch.
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<div class="gallery-item">
+<img
+src="https://images.pexels.com/photos/4625626/pexels-photo-4625626.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Barber giving a haircut">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://cdn.australia247.info/assets/uploads/fb04448f52f9547ed71a229e40a08b2f_-victoria-city-of-wyndham-werribee-lucy-barber-shop-03-9119-0617html.jpg"
+alt="Fade haircut">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.fresha.com/locations/location-profile-images/2658859/4891452/a7605587-b2fc-4270-be0f-ec9df4608e71-RobbiesChopShop-AU-SouthAustralia-Adelaide-Unley-Fresha.jpg?class=venue-gallery-mobile&f_width=1000"
+alt="Barber creating a fade">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.squarespace-cdn.com/content/v1/667a3aff9bb945245c7dd53b/00b9bd47-01f9-4222-bfc6-463fd65ad1f9/_16A9860.jpg"
+alt="Modern barbershop haircut">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://irp.cdn-website.com/9d473872/dms3rep/multi/IMG-20240327-WA0003.jpg"
+alt="Fresh fade haircut">
+</div>
+
+<div class="gallery-item">
+<img
+src="https://images.pexels.com/photos/12706272/pexels-photo-12706272.jpeg?auto=compress&cs=tinysrgb&w=1000"
+alt="Men's haircut and beard">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking" id="booking">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">Appointments</div>
+
+<h2>BOOK YOUR CHAIR</h2>
+
+<p>
+Choose your service, date and a 30-minute appointment time.
+</p>
+
+</div>
+
+<div class="booking-box">
+
+<h2>ONLINE BOOKING</h2>
+
+<p>
+Select your service first. Available start times are generated
+in 30-minute intervals and automatically follow ALPHA BLADES'
+listed opening hours.
+</p>
+
+<form id="bookingForm">
+
+<div class="form-grid">
+
+<div class="form-group">
+
+<label for="name">Your Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Full name"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label for="phone">Mobile</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="04XX XXX XXX"
+required>
+
+</div>
+
+<div class="form-group">
+
+<label for="service">Service</label>
+
+<select id="service" required>
+
+<option value="">Choose a service</option>
+
+<option value="Classic Haircut" data-duration="30" data-price="$45–$55">
+Classic Haircut — $45–$55
+</option>
+
+<option value="Skin Fade" data-duration="30" data-price="$50–$60">
+Skin Fade — $50–$60
+</option>
+
+<option value="Taper Fade" data-duration="30" data-price="$45–$55">
+Taper Fade — $45–$55
+</option>
+
+<option value="Buzz Cut" data-duration="30" data-price="$35–$45">
+Buzz Cut — $35–$45
+</option>
+
+<option value="Kids Cut" data-duration="30" data-price="$35–$45">
+Kids Cut — $35–$45
+</option>
+
+<option value="Haircut + Beard" data-duration="60" data-price="$60–$75">
+Haircut + Beard — $60–$75
+</option>
+
+<option value="Beard Trim" data-duration="30" data-price="$25–$35">
+Beard Trim — $25–$35
+</option>
+
+<option value="Beard Conditioning" data-duration="30" data-price="$20–$30">
+Beard Conditioning — $20–$30
+</option>
+
+<option value="Beard Dye" data-duration="30" data-price="$30–$45">
+Beard Dye — $30–$45
+</option>
+
+<option value="Hair Colouring" data-duration="60" data-price="$60–$120+">
+Hair Colouring — $60–$120+
+</option>
+
+<option value="Capillary Hair Treatment" data-duration="60" data-price="$50–$100+">
+Capillary Hair Treatment — $50–$100+
+</option>
+
+<option value="Head Shave" data-duration="30" data-price="$30–$45">
+Head Shave — $30–$45
+</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label for="date">Date</label>
+
+<input
+type="date"
+id="date"
+required>
+
+</div>
+
+</div>
+
+
+<div class="time-title">
+Choose a 30-minute appointment
+</div>
+
+<div id="timeSlots" class="time-slots"></div>
+
+<div id="selectedTime" class="selected-time">
+No time selected.
+</div>
+
+
+<div class="form-group" style="margin-top:25px">
+
+<label for="notes">Notes</label>
+
+<textarea
+id="notes"
+placeholder="Tell us anything we should know about your cut..."></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="booking-button">
+
+REQUEST THIS APPOINTMENT
+
+</button>
+
+<p class="booking-note">
+Your request will open an SMS message to ALPHA BLADES.
+The appointment is not confirmed until the shop confirms it.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="small">Visit Us</div>
+
+<h2>ALPHA BLADES NARELLAN</h2>
+
+<p>
+Come in for your next cut or contact the shop to arrange
+an appointment.
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="icon">📞</div>
+
+<h3>CALL</h3>
+
+<a href="tel:0485522448">
+0485 522 448
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<div class="icon">📍</div>
+
+<h3>LOCATION</h3>
+
+<p>
+Shop 5c/342 Camden Valley Wy<br>
+Narellan NSW 2567
+</p>
+
+<a
+class="map-link"
+href="https://www.google.com/maps/search/?api=1&query=Shop+5c%2F342+Camden+Valley+Wy%2C+Narellan+NSW+2567"
+target="_blank">
+
+GET DIRECTIONS →
+
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<div class="icon">🕒</div>
+
+<h3>OPENING HOURS</h3>
+
+<p>
+Monday 8:30am–6:00pm<br>
+Tuesday 8:30am–6:00pm<br>
+Wednesday 8:30am–6:00pm<br>
+Thursday 8:30am–8:00pm<br>
+Friday 8:30am–6:00pm<br>
+Saturday 8:00am–6:00pm<br>
+Sunday 9:00am–4:30pm
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+<strong>ALPHA BLADES NARELLAN</strong>
+</p>
+
+<p>
+Shop 5c/342 Camden Valley Wy, Narellan NSW 2567
+</p>
+
+<p>
+© 2026 ALPHA BLADES
+</p>
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   ALPHA BLADES BOOKING SYSTEM
+   =========================================
+
+   Opening hours:
+   Mon 08:30 - 18:00
+   Tue 08:30 - 18:00
+   Wed 08:30 - 18:00
+   Thu 08:30 - 20:00
+   Fri 08:30 - 18:00
+   Sat 08:00 - 18:00
+   Sun 09:00 - 16:30
+
+   Appointment start times are every 30 minutes.
+*/
+
+const openingHours = {
+
+  0: { start: "09:00", end: "16:30" }, // Sunday
+  1: { start: "08:30", end: "18:00" }, // Monday
+  2: { start: "08:30", end: "18:00" }, // Tuesday
+  3: { start: "08:30", end: "18:00" }, // Wednesday
+  4: { start: "08:30", end: "20:00" }, // Thursday
+  5: { start: "08:30", end: "18:00" }, // Friday
+  6: { start: "08:00", end: "18:00" }  // Saturday
+
+};
+
+const dateInput =
+document.getElementById("date");
+
+const serviceInput =
+document.getElementById("service");
+
+const timeSlots =
+document.getElementById("timeSlots");
+
+const selectedTime =
+document.getElementById("selectedTime");
+
+let chosenTime = "";
+
+
+/* Prevent selecting dates in the past */
+
+const today =
+new Date().toISOString().split("T")[0];
+
+dateInput.min = today;
+
+
+/* Convert HH:MM to minutes */
+
+function timeToMinutes(time){
+
+  const parts = time.split(":");
+
+  return Number(parts[0]) * 60 + Number(parts[1]);
+
+}
+
+
+/* Convert minutes to HH:MM */
+
+function minutesToTime(minutes){
+
+  const hours =
+  Math.floor(minutes / 60);
+
+  const mins =
+  minutes % 60;
+
+  return String(hours).padStart(2,"0")
+  + ":"
+  + String(mins).padStart(2,"0");
+
+}
+
+
+/* Convert 24 hour time to nicer display */
+
+function displayTime(time){
+
+  let [hours, minutes] =
+  time.split(":").map(Number);
+
+  const suffix =
+  hours >= 12 ? "PM" : "AM";
+
+  hours =
+  hours % 12 || 12;
+
+  return `${hours}:${String(minutes).padStart(2,"0")} ${suffix}`;
+
+}
+
+
+/* Generate appointment slots */
+
+function generateSlots(){
+
+  timeSlots.innerHTML = "";
+
+  chosenTime = "";
+
+  selectedTime.textContent =
+  "No time selected.";
+
+  if(!dateInput.value ||
+     !serviceInput.value){
+
+    return;
+  }
+
+  const selectedDate =
+  new Date(dateInput.value + "T00:00:00");
+
+  const day =
+  selectedDate.getDay();
+
+  const hours =
+  openingHours[day];
+
+  if(!hours){
+
+    timeSlots.innerHTML =
+    "<p>Closed on this day.</p>";
+
+    return;
+  }
+
+  const service =
+  serviceInput.options[
+    serviceInput.selectedIndex
+  ];
+
+  const duration =
+  Number(service.dataset.duration || 30);
+
+  const start =
+  timeToMinutes(hours.start);
+
+  const close =
+  timeToMinutes(hours.end);
+
+  /*
+    Only show a start time if the entire service
+    can fit before closing.
+  */
+
+  for(
+    let time = start;
+    time + duration <= close;
+    time += 30
+  ){
+
+    const formatted =
+    minutesToTime(time);
+
+    const button =
+    document.createElement("button");
+
+    button.type = "button";
+
+    button.className =
+    "time-slot";
+
+    button.textContent =
+    displayTime(formatted);
+
+    button.addEventListener(
+      "click",
+      function(){
+
+        document
+        .querySelectorAll(".time-slot")
+        .forEach(btn =>
+          btn.classList.remove("selected")
+        );
+
+        button.classList.add("selected");
+
+        chosenTime =
+        formatted;
+
+        selectedTime.textContent =
+        "Selected: " +
+        displayTime(formatted) +
+        " • " +
+        service.value;
+
+      }
+    );
+
+    timeSlots.appendChild(button);
+
+  }
+
+}
+
+
+/* Update times when date changes */
+
+dateInput.addEventListener(
+  "change",
+  generateSlots
+);
+
+
+/* Update times when service changes */
+
+serviceInput.addEventListener(
+  "change",
+  generateSlots
+);
+
+
+/* Booking form */
+
+document
+.getElementById("bookingForm")
+.addEventListener(
+  "submit",
+  function(event){
+
+    event.preventDefault();
+
+    if(!chosenTime){
+
+      alert(
+        "Please choose an appointment time."
+      );
+
+      return;
+    }
+
+    const name =
+    document.getElementById("name").value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const service =
+    serviceInput.value;
+
+    const date =
+    dateInput.value;
+
+    const notes =
+    document.getElementById("notes").value;
+
+    const selectedOption =
+    serviceInput.options[
+      serviceInput.selectedIndex
+    ];
+
+    const price =
+    selectedOption.dataset.price;
+
+    const duration =
+    selectedOption.dataset.duration;
+
+    const message =
+`Hi ALPHA BLADES Narellan,
+
+I'd like to request an appointment.
+
+Name: ${name}
+Phone: ${phone}
+
+Service: ${service}
+Estimated price: ${price}
+Duration: ${duration} minutes
+
+Date: ${date}
+Time: ${displayTime(chosenTime)}
+
+Notes:
+${notes}
+
+Please confirm if this appointment is available.`;
+
+    /*
+      Australian mobile number in international format.
+      This opens the customer's SMS app.
+    */
+
+    const smsUrl =
+    "sms:+61485522448?body="
+    + encodeURIComponent(message);
+
+    window.location.href = smsUrl;
+
+  }
+);
+
+</script>
+
+</body>
+</html>
+```
